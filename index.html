@@ -59,6 +59,16 @@
     <h2>Count Down: <span id="count"><script>document.write(i)</script></span></h2>
     <button onclick="updateCount()">Next</button>
 
+
+    
+    <button id="changeColorButton">Change Background Color to Orange</button>
+
+<script>
+  document.getElementById("changeColorButton").addEventListener("click", function() {
+    document.body.style.backgroundColor = "orange";
+  });
+</script>
+
   
 </body>
 </html>
