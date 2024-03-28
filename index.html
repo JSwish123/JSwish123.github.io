@@ -34,6 +34,22 @@
     <center><a href="https://www.virginia.edu/">Here is a link to UVA's website</a></center>
     <br>
 
+    <button id="orangeButton">Orange</button>
+
+
+<button id="blueButton">Blue</button>
+
+<script>
+
+  document.getElementById("orangeButton").addEventListener("click", function() {
+    document.body.style.backgroundColor = "orange";
+  });
+
+
+  document.getElementById("blueButton").addEventListener("click", function() {
+    document.body.style.backgroundColor = "blue";
+  });
+</script>
 
   <h1>Exploring the DOM</h1>
 
@@ -60,22 +76,6 @@
     <button onclick="updateCount()">Next</button>
 
 
-  <button id="orangeButton">Change Background Color to Orange</button>
-
-
-<button id="blueButton">Change Background Color to Blue</button>
-
-<script>
-
-  document.getElementById("orangeButton").addEventListener("click", function() {
-    document.body.style.backgroundColor = "orange";
-  });
-
-
-  document.getElementById("blueButton").addEventListener("click", function() {
-    document.body.style.backgroundColor = "blue";
-  });
-</script>
   
 </body>
 </html>
