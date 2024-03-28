@@ -53,7 +53,7 @@
 
   <h1>Exploring the DOM</h1>
 
- <script>
+<script>
         function updateCount() {
             i = i - 1; 
 
@@ -61,12 +61,14 @@
             console.log("Updating i: " + i);
             countobj.innerHTML = "<b>" + i + "</b>";
 
-            if (i <= 0) { 
+            if (i === 0) { 
                 countobj.innerHTML = "<b><font size='+5'>BOOM!</font></b>"; 
-  
                 alert("Countdown reached zero!");
             }
-        }
+
+            var colorIntensity = i * 10; 
+            var redValue = Math.min(colorIntensity, 255); 
+            document.body.style.backgroundColor = "rgb(" + redValue + ", 0, 0)"; 
     </script>
 
     <script>
