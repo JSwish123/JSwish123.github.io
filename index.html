@@ -74,10 +74,17 @@
         blueValue = Math.max(blueValue, 0); // Ensure blue value does not go below 0
         document.body.style.backgroundColor = "rgb(0, 0, " + blueValue + ")"; // Set background color to darker shades of blue
     }
+function resetCountdown() {
+        i = initialCount; // Reset the countdown to initial value
+        var countobj = document.getElementById("count");
+        countobj.innerHTML = "<b>" + i + "</b>"; // Update countdown display
+        document.body.style.backgroundColor = "white"; // Reset background color to white
+    }
 </script>
 
 <h2>Count Down: <span id="count"><script>document.write(i)</script></span></h2>
 <button onclick="updateCount()">Next</button>
+<button onclick="resetCountdown()">Reset Countdown</button>
 
   
 </body>
