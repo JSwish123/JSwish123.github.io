@@ -70,7 +70,7 @@
         }
 
         // Calculate blue value based on countdown value (darker shade as count approaches 0)
-        var blueValue = 50 + (i * 25); // Adjust multiplier to control color intensity
+        var blueValue = 500 + (i * 25); // Adjust multiplier to control color intensity
         blueValue = Math.max(blueValue, 0); // Ensure blue value does not go below 0
         document.body.style.backgroundColor = "rgb(0, 0, " + blueValue + ")"; // Set background color to darker shades of blue
     }
