@@ -63,14 +63,14 @@
         console.log("Updating i: " + i);
         countobj.innerHTML = "<b>" + i + "</b>";
 
-        if (i === 0) { // Check if i equals 0
+        if (i <= 0) { // Check if i equals 0
             countobj.innerHTML = "<b><font size='+5'>BOOM!</font></b>"; // Display "BOOM!" in large font size
             // Perform additional actions when i reaches 0
             alert("Countdown reached zero!");
         }
 
         // Calculate blue value based on countdown value (darker shade as count approaches 0)
-        var blueValue = 255 - (i * 25); // Adjust multiplier to control color intensity
+        var blueValue = 50 + (i * 25); // Adjust multiplier to control color intensity
         blueValue = Math.max(blueValue, 0); // Ensure blue value does not go below 0
         document.body.style.backgroundColor = "rgb(0, 0, " + blueValue + ")"; // Set background color to darker shades of blue
     }
