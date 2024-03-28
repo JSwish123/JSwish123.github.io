@@ -54,31 +54,30 @@
   <h1>Exploring the DOM</h1>
 
 <script>
-    var i = 5; // Initialize i with the value 5
+    var i = 5; 
 
     function updateCount() {
-        i = i - 1; // Decrease the value of i by 1
+        i = i - 1; 
 
         var countobj = document.getElementById("count");
         console.log("Updating i: " + i);
         countobj.innerHTML = "<b>" + i + "</b>";
 
-        if (I <= 0) { // Check if i equals 0
-            countobj.innerHTML = "<b><font size='+5'>BOOM!</font></b>"; // Display "BOOM!" in large font size
-            // Perform additional actions when i reaches 0
+        if (i === 0) { 
+            countobj.innerHTML = "<b><font size='+5'>BOOM!</font></b>"; 
+           
             alert("Countdown reached zero!");
         }
 
-        // Calculate blue value based on countdown value (darker shade as count approaches 0)
-        var blueValue = 100 + (i * 25); // Adjust multiplier to control color intensity
-        blueValue = Math.max(blueValue, 0); // Ensure blue value does not go below 0
-        document.body.style.backgroundColor = "rgb(0, 0, " + blueValue + ")"; // Set background color to darker shades of blue
+      
+        var blueValue = 100 + (i * 25); 
+        blueValue = Math.max(blueValue, 0); 
+        document.body.style.backgroundColor = "rgb(0, 0, " + blueValue + ")"; 
     }
 </script>
 
 <h2>Count Down: <span id="count"><script>document.write(i)</script></span></h2>
 <button onclick="updateCount()">Next</button>
-
 
 </body>
 </html>
